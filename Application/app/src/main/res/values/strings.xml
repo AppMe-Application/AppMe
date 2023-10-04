@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">AppMe</string>
+	
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">AndroidIDE</string>
+    <string name="nav_header_subtitle">contact@androidide.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    
+	
+	<string name="asset_statements">
+		["relation": ["delegate_permission/common.handle_all_urls"],
+		    "target": {
+		    "namespace": "web",
+		    "site": "https://appme-booster.web.app"
+		}
+		}]
+		
+    </string>
+	
+	<string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="action_save_credential">Save\nCredential</string>
+    <string name="load_credentials">Load\nCredentials</string>
+    <string name="delete_credential">Delete\nCredential</string>
+    <string name="load_hint">Load\nHint</string>
+    <string name="label_request_id_token">Request ID Token:</string>
+	
+	<string name="signed_out">Signed Out</string>
+    <string name="revoke_access">Revoke Access</string>
+    <string name="sign_in_email_cta">Sign In with Email</string>
+    <string name="sign_out">Sign Out</string>
+	
+	<string name="textview">FirebaseExample By: Wildan M Athoillah</string>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+    <string name="facebook_app_id">152362762223095</string>
+    <string name="fb_login_protocol_scheme">fb152362762223095</string>
+</resources>

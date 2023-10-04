@@ -1,0 +1,13 @@
+{
+  "name": "AppMe",
+  "short_name": "AppMe",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "lang": "en-US",
+  "description": "AppMe application.",
+  "prefer_related_applications": false,
+  "theme_color": "#fff",
+  "scope": "/",
+  "orientation": "portrait-primary"
+}

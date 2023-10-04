@@ -1,0 +1,11 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "web",
+    "site": "https://appme-booster.web.app"
+  }
+},{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.appme.story",
+               "sha256_cert_fingerprints": ["d57eef8539b7950b20de9eaa33847a1ebf4ce14b06cf0756d474274c69e17e56"] }
+}]

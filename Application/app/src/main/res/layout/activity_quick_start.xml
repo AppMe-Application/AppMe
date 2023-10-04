@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="?attr/colorPrimary"
+         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+         android:minHeight="?attr/actionBarSize"
+         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+         android:id="@+id/toolbar">
+
+        <ProgressBar
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:visibility="invisible"
+             android:indeterminate="true"
+             tools:visibility="visible"
+             android:indeterminateOnly="true"
+             android:id="@+id/progress_bar"
+             android:layout_gravity="right" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+         android:layout_height="wrap_content"
+         android:layout_width="@dimen/width_field"
+         android:layout_below="@+id/toolbar"
+         android:gravity="center_horizontal"
+         android:hint="@string/hint_email"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="20dp"
+         android:inputType="textEmailAddress"
+         android:id="@+id/edit_text_email" />
+
+    <EditText
+         android:layout_height="wrap_content"
+         android:layout_width="@dimen/width_field"
+         android:layout_below="@+id/edit_text_email"
+         android:gravity="center_horizontal"
+         android:hint="@string/hint_password"
+         android:layout_centerHorizontal="true"
+         android:inputType="textPassword"
+         android:id="@+id/edit_text_password" />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_below="@id/edit_text_password"
+         android:orientation="horizontal"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="20dp"
+         android:id="@+id/layout_save_delete">
+
+        <Button
+             android:layout_height="wrap_content"
+             android:layout_width="150dp"
+             android:id="@+id/button_save_credential"
+             android:text="@string/action_save_credential" />
+
+        <Button
+             android:layout_height="wrap_content"
+             android:layout_width="150dp"
+             android:enabled="false"
+             android:id="@+id/button_delete_loaded_credential"
+             android:text="@string/delete_credential" />
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_below="@id/layout_save_delete"
+         android:orientation="horizontal"
+         android:layout_centerHorizontal="true"
+         android:id="@+id/layout_load">
+
+        <Button
+             android:layout_height="wrap_content"
+             android:layout_width="150dp"
+             android:enabled="true"
+             android:id="@+id/button_load_credentials"
+             android:text="@string/load_credentials" />
+
+        <Button
+             android:layout_height="wrap_content"
+             android:layout_width="150dp"
+             android:enabled="true"
+             android:id="@+id/button_load_hint"
+             android:text="@string/load_hint" />
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_below="@+id/layout_load"
+         android:orientation="horizontal"
+         android:layout_centerHorizontal="true">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:text="@string/label_request_id_token" />
+
+        <CheckBox
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:checked="true"
+             android:id="@+id/checkbox_request_idtoken" />
+
+    </LinearLayout>
+
+</RelativeLayout>

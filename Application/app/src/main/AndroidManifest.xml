@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- dapatkan akses jaringan penuh -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- lihat koneksi jaringan -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- lihat sambungan Wi-Fi -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!-- membaca konten penyimpanan bersama Anda -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- memodifikasi atau menghapus konten penyimpanan bersama Anda -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- ACCOUNT_MANAGER -->
+    <uses-permission android:name="android.permission.ACCOUNT_MANAGER"/>
+
+    <!-- AUTHENTICATE_ACCOUNTS -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+
+    <!-- cari akun pada perangkat -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <!-- GET_ACCOUNTS_PRIVILEGED -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
+
+    <!-- MANAGE_ACCOUNTS -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+
+    <!-- mencegah ponsel menjadi tidak aktif -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- USE_CREDENTIALS -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="StoryActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:scheme="https"
+                    android:host="appme-booster.web.app"
+                    android:pathPrefix="/auth"/>
+
+                <data
+                    android:scheme="https"
+                    android:host="appme-booster.firebaseapp.com"
+                    android:pathPrefix="/auth"/>
+
+            </intent-filter>
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:scheme="app"
+                    android:host="auth"/>
+
+            </intent-filter>
+
+        </activity>
+		<activity
+            android:name=".FirebaseAuthActivity"
+            android:label="@string/app_name">
+
+        </activity>
+        <activity
+            android:name=".QuickStartActivity"
+            android:label="@string/app_name">
+
+        </activity>
+
+        <activity
+            android:name=".SignInActivity"
+            android:label="@string/app_name">
+
+        </activity>
+		<activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <service
+            android:name=".MockServer"
+            android:enabled="true"/>
+
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements"/>
+
+    </application>
+
+</manifest>
